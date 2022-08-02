@@ -1,5 +1,10 @@
 # Getting Started
 
+## Links
+
+- GitHub link of the Repository
+    - https://github.com/kavitasingh1993/soccer-team-laravel-app
+  
 ### Clone the repository using the following command
 
     git clone https://github.com/kavitasingh1993/soccer-team-laravel-app.git
@@ -17,3 +22,8 @@ In order to start developing, follow these steps:
 - Go to Browser and run the url as http://localhost:8088/ to start the application.
 - Create a `.env.testing` using the `.env.example` example.
 - Go to src folder and Run 'vendor/bin/phpunit' command to run the unit test cases.
+
+## Website Link
+
+- Website Link deployed on heroku
+    - http://soccer-team-laravel-app.herokuapp.com/login
