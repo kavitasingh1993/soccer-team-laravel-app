@@ -2,7 +2,7 @@
 
 ### Clone the repository using the following command
 
-    git clone https://github.com/kavitasingh1993/laravel_soccer.git
+    git clone https://github.com/kavitasingh1993/soccer-team-laravel-app.git
         
 ## Getting Started | Installation
 
