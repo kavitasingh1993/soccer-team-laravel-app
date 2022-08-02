@@ -12,4 +12,6 @@ In order to start developing, follow these steps:
 - Install dependencies running `composer install`.
 - Run `docker-compose up -d --build` to spin up framework server.
 - Go to src folder and Run `docker-compose run --rm artisan migrate` to setup the database.
-- Go to Browser and run the url as http://localhost:8088/ to start the application
+- Go to Browser and run the url as http://localhost:8088/ to start the application.
+- Create a `.env.testing` using the `.env.example` example.
+- Go to src folder and Run 'vendor/bin/phpunit' command to run the unit test cases.

@@ -12,3 +12,5 @@ src/npm-debug.log
 src/yarn-error.log
 .idea
 .vscode
+src/public/image/
+src/image
