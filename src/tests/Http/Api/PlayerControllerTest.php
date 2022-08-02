@@ -35,9 +35,8 @@ class PlayerControllerTest extends TestCase
     public function testStorePlayerDetails(){
         Storage::fake('local');
         $file = UploadedFile::fake()->create('testing.jpg');
-        $this->withoutExceptionHandling();
         $payload = [
-            'firstName' => "test",
+            'firstName' => "test demo",
             'lastName'  => "india",
             'playerImageURL' => $file,
             'team_id' => 1,

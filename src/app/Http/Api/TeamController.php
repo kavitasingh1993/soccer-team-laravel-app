@@ -119,7 +119,7 @@ class TeamController extends Controller
      */
 
     /**
-     * @OA\Post(
+     * @OA\Put(
      *      path="/api/teams/{team}",
      *      operationId="updateTeamDetails",
      *      tags={"teams"},

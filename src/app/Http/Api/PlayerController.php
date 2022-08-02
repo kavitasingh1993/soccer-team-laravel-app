@@ -124,7 +124,7 @@ class PlayerController extends Controller
      */
 
     /**
-     * @OA\Post(
+     * @OA\Put(
      *      path="/api/players/{player}",
      *      operationId="updatePlayerDetails",
      *      tags={"players"},
@@ -172,10 +172,6 @@ class PlayerController extends Controller
      */
     public function updatePlayerDetails(Request $request, Player $player): JsonResponse
     {
-        $request->validate([
-            'firstName' => 'required',
-            'lastName' => 'required'
-        ]);
         $input = $request->all();
         $this->playerService->updatePlayerDetails($player,$input);
 
