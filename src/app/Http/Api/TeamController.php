@@ -133,7 +133,6 @@ class TeamController extends Controller
      *              @OA\Schema(
      *                 @OA\Property(property="name", type="string", format="name", example="team bhutan"),
      *                 @OA\Property(property="logoURL", type="string", format="binary", example="testing.jpeg"),
-     *                 @OA\Property(property="_method", type="string", format="_method", example="put"),
      *            ),
      *          ),
      *       ),

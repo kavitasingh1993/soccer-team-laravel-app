@@ -140,7 +140,6 @@ class PlayerController extends Controller
      *                 @OA\Property(property="lastName", type="string", format="lastName", example="chand"),
      *                 @OA\Property(property="playerImageURL", type="string", format="binary", example="testing.jpeg"),
      *                 @OA\Property(property="team_id", type="int", format="team_id", example="1"),
-     *                 @OA\Property(property="_method", type="string", format="_method", example="put"),
      *            ),
      *          ),
      *       ),

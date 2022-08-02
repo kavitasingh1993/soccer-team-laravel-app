@@ -118,11 +118,6 @@
                                         "type": "string",
                                         "format": "binary",
                                         "example": "testing.jpeg"
-                                    },
-                                    "_method": {
-                                        "type": "string",
-                                        "format": "_method",
-                                        "example": "put"
                                     }
                                 },
                                 "type": "object"
@@ -337,11 +332,6 @@
                                         "type": "integer",
                                         "format": "team_id",
                                         "example": "1"
-                                    },
-                                    "_method": {
-                                        "type": "string",
-                                        "format": "_method",
-                                        "example": "put"
                                     }
                                 },
                                 "type": "object"
@@ -418,6 +408,7 @@
                 }
             }
         }
+
     },
     "components": {
         "responses": {
