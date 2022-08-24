@@ -146,7 +146,7 @@ class TeamController extends Controller
      *          )
      *      ),
      *      @OA\Response(
-     *          response=201,
+     *          response=204,
      *          description="Successful operations",
      *          @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Team has been updated successfully")
@@ -167,7 +167,7 @@ class TeamController extends Controller
         $input = $request->all();
         $this->teamService->updateTeamDetails($input,$team);
 
-        return response()->json(['message'=>'Team has been updated successfully'],201);
+        return response()->json(['message'=>'Team has been updated successfully'],204);
     }
 
     /**
@@ -194,7 +194,7 @@ class TeamController extends Controller
      *          )
      *      ),
      *      @OA\Response(
-     *          response=201,
+     *          response=204,
      *          description="Successful operations",
      *          @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Team has been deleted successfully")
@@ -217,6 +217,6 @@ class TeamController extends Controller
         }
         $this->teamService->deleteTeamDetails($team);
 
-        return response()->json(['message'=>'Team has been deleted successfully'],201);
+        return response()->json(['message'=>'Team has been deleted successfully'],204);
     }
 }

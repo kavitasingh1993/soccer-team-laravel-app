@@ -38,7 +38,7 @@
                 </div>
             @endif
             <div class="container">
-                <h2>Soccer Team</h2>
+                <!-- <h2>Soccer Team</h2> -->
                 <p> Soccer is a team sport played by a team of <strong>11 players</strong> against another team of 11 players on a field. The team has one designated goalkeeper and 10 outfield players. Outfield players are usually specialised in attacking or defending or both.</p>
                 <p>To login to the Soccer Team please <a class="btn btn-info" href="/login">Click here</a></p>
                 <div class="panel-group">

@@ -13,187 +13,6 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/api/teams": {
-            "get": {
-                "tags": [
-                    "teams"
-                ],
-                "summary": "Get list of teams",
-                "description": "Returns list of teams",
-                "operationId": "getAllTeams",
-                "responses": {
-                    "200": {
-                        "description": "Successful operation"
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "teams"
-                ],
-                "summary": "Store new Team",
-                "description": "Returns new team",
-                "operationId": "storeTeamDetails",
-                "requestBody": {
-                    "description": "Pass team information to add",
-                    "required": true,
-                    "content": {
-                        "multipart/form-data": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string",
-                                        "format": "name",
-                                        "example": "team bhutan"
-                                    },
-                                    "logoURL": {
-                                        "type": "string",
-                                        "format": "binary",
-                                        "example": "testing.jpeg"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Successful operations",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Team has been created successfully"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    }
-                }
-            }
-        },
-        "/api/teams/{team}": {
-            "put": {
-                "tags": [
-                    "teams"
-                ],
-                "summary": "Update existing team",
-                "description": "Returns updated team",
-                "operationId": "updateTeamDetails",
-                "parameters": [
-                    {
-                        "name": "team",
-                        "in": "path",
-                        "description": "team id",
-                        "required": true,
-                        "schema": {
-                            "type": "integer"
-                        }
-                    }
-                ],
-                "requestBody": {
-                    "description": "Pass team information to update",
-                    "required": false,
-                    "content": {
-                        "multipart/form-data": {
-                            "schema": {
-                                "properties": {
-                                    "name": {
-                                        "type": "string",
-                                        "format": "name",
-                                        "example": "team bhutan"
-                                    },
-                                    "logoURL": {
-                                        "type": "string",
-                                        "format": "binary",
-                                        "example": "testing.jpeg"
-                                    }
-                                },
-                                "type": "object"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Successful operations",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Team has been updated successfully"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "teams"
-                ],
-                "summary": "Delete existing team",
-                "description": "Deletes a record and returns no content",
-                "operationId": "deleteTeamDetails",
-                "parameters": [
-                    {
-                        "name": "team",
-                        "in": "path",
-                        "description": "team id",
-                        "required": true,
-                        "schema": {
-                            "type": "integer"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Successful operations",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Team has been deleted successfully"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    },
-                    "403": {
-                        "description": "Forbidden"
-                    }
-                }
-            }
-        },
         "/api/teams/{team}/players": {
             "get": {
                 "tags": [
@@ -383,7 +202,7 @@
                     }
                 ],
                 "responses": {
-                    "201": {
+                    "204": {
                         "description": "Successful operations",
                         "content": {
                             "application/json": {
@@ -407,8 +226,188 @@
                     }
                 }
             }
+        },
+        "/api/teams": {
+            "get": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Get list of teams",
+                "description": "Returns list of teams",
+                "operationId": "getAllTeams",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Store new Team",
+                "description": "Returns new team",
+                "operationId": "storeTeamDetails",
+                "requestBody": {
+                    "description": "Pass team information to add",
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "format": "name",
+                                        "example": "team bhutan"
+                                    },
+                                    "logoURL": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "example": "testing.jpeg"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful operations",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Team has been created successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
+        "/api/teams/{team}": {
+            "put": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Update existing team",
+                "description": "Returns updated team",
+                "operationId": "updateTeamDetails",
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "team id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Pass team information to update",
+                    "required": false,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "format": "name",
+                                        "example": "team bhutan"
+                                    },
+                                    "logoURL": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "example": "testing.jpeg"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Successful operations",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Team has been updated successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "teams"
+                ],
+                "summary": "Delete existing team",
+                "description": "Deletes a record and returns no content",
+                "operationId": "deleteTeamDetails",
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "team id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Successful operations",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Team has been deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
         }
-
     },
     "components": {
         "responses": {

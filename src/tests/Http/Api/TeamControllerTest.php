@@ -46,8 +46,7 @@ class TeamControllerTest extends TestCase
         $team_id= $team->toArray()[0]['id'];
         $payload= ['name'=>'John Doe','logoURL'=>$file,'_method'=>'put','team_id'=>1];
         $this->json('PUT', 'api/teams/' . $team_id , $payload, ['Accept' => 'application/json'])
-            ->assertStatus(201)
-            ->assertJson(["message" => "Team has been updated successfully"]);
+            ->assertStatus(204);
     }
 
     /**
@@ -57,7 +56,6 @@ class TeamControllerTest extends TestCase
         $team = Team::factory()->count(1)->create();
         $team_id= $team->toArray()[0]['id'];
         $this->json('DELETE', 'api/teams/' . $team_id, [])
-            ->assertStatus(201)
-            ->assertJson(['message'=>'Team has been deleted successfully']);
+            ->assertStatus(204);
     }
 }

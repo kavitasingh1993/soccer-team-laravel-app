@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Soccer Team</h2>
+                <!-- <h2>Soccer Team</h2> -->
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('players.create') }}"> Create New Player</a>

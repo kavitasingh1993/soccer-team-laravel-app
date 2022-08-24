@@ -153,7 +153,7 @@ class PlayerController extends Controller
      *          )
      *      ),
      *      @OA\Response(
-     *          response=201,
+     *          response=204,
      *          description="Successful operations",
      *          @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Player has been updated successfully")
@@ -174,7 +174,7 @@ class PlayerController extends Controller
         $input = $request->all();
         $this->playerService->updatePlayerDetails($player,$input);
 
-        return response()->json(['message'=>'Player has been updated successfully'],201);
+        return response()->json(['message'=>'Player has been updated successfully'],204);
     }
 
     /**
@@ -200,7 +200,7 @@ class PlayerController extends Controller
      *          )
      *      ),
      *      @OA\Response(
-     *          response=201,
+     *          response=204,
      *          description="Successful operations",
      *          @OA\JsonContent(
      *             @OA\Property(property="message", type="string", example="Player has been deleted successfully")
@@ -224,7 +224,7 @@ class PlayerController extends Controller
         $this->playerService->deletePlayerDetails($player);
         $team_id = $request->input('team_id');
 
-        return response()->json(['message'=>'Player has been deleted successfully'],201);
+        return response()->json(['message'=>'Player has been deleted successfully'],204);
     }
 
 }

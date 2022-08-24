@@ -60,8 +60,7 @@ class PlayerControllerTest extends TestCase
             'playerImageURL' => $file,
             'team_id' => 1,
         ];
-        $this->json('PUT', 'api/players/'.$player_id, $payload)->assertStatus(201)
-            ->assertJson(['message'=>'Player has been updated successfully']);
+        $this->json('PUT', 'api/players/'.$player_id, $payload)->assertStatus(204);
     }
 
     /**
@@ -71,7 +70,6 @@ class PlayerControllerTest extends TestCase
         $player = Player::factory()->count(1)->create();
         $player_id= $player->toArray()[0]['id'];
         $this->json('DELETE', 'api/players/' . $player_id, [])
-            ->assertStatus(201)
-            ->assertJson(['message'=>'Player has been deleted successfully']);
+            ->assertStatus(204);
     }
 }

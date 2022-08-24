@@ -12,15 +12,19 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+            <div class="col-md-12" style="display:flex;justify-content:space-evenly;">
+                <div class="col-md-1">
                     <strong>Name:</strong>
+                </div>
+                <div class="col-md-11">
                     {{ $team->name }}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+            <div class="col-md-12" style="display:flex;justify-content:space-evenly;">
+                <div class="col-md-1">
                     <strong>Image:</strong>
+                </div>
+                <div class="col-md-11">
                     <img src="/image/{{ $team->logoURL }}" width="500px">
                 </div>
             </div>

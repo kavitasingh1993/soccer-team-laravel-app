@@ -12,21 +12,27 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+        <div class="col-md-12" style="display:flex;justify-content:space-evenly;">
+                <div class="col-md-2">
                     <strong>First Name:</strong>
+                </div>
+                <div class="col-md-10">
                     {{ $player->firstName }}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                 <div class="form-group">
+            <div class="col-md-12" style="display:flex;justify-content:space-evenly;">
+                <div class="col-md-2">
                     <strong>Last Name:</strong>
+                </div>
+                <div class="col-md-10">
                     {{ $player->lastName }}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
+            <div class="col-md-12" style="display:flex;justify-content:space-evenly;">
+                <div class="col-md-2">
                     <strong>Player Image:</strong>
+                </div>
+                <div class="col-md-10">
                     <img src="/image/{{ $player->playerImageURL }}" width="500px">
                 </div>
             </div>
